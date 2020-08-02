@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SchoolMgmtUI"
+    }
+  },
+  "defaultProject": "SchoolMgmtUI",
+  "cli": {
+    "analytics": false
+  }
 }
