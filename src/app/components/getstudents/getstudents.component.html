@@ -1,1 +1,21 @@
-<p>getstudents works!</p>
+<!-- <p>getstudents works!</p> -->
+
+<div class="form-group">
+    <label> Name: </label>
+    <a></a>
+
+</div>
+
+<div style="padding: 13px;">
+    <mat-card *ngIf="student_details" style="margin-top:10px;">
+        <mat-card-header>
+            <mat-card-title>{{student_details.StudentName | json}}</mat-card-title>
+            <mat-card-title>{{student_details.StudentRollNumber | json}}</mat-card-title>
+            <mat-card-title>{{student_details.DateOfBirth | json}}</mat-card-title>
+            <mat-card-title>{{student_details.studentSex | json}}</mat-card-title>
+            <mat-card-title>{{student_details.CurrentAddress | json}}</mat-card-title>
+            <mat-card-title>{{student_details.ContactNumber | json}}</mat-card-title>
+            <mat-card-title>{{student_details.Parent | json}}</mat-card-title>
+        </mat-card-header>
+    </mat-card>
+</div>

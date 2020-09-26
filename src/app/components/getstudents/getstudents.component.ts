@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-getstudents',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./getstudents.component.css']
 })
 export class GetstudentsComponent implements OnInit {
-
-  constructor() { }
+  student_details = []
+  constructor(private apiService:ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.sendGetRequest().subscribe((student: any[]) => {
+    this.student_details = student;
+    })
   }
 
 }
